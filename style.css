@@ -1,0 +1,411 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #cbd5e1;
+    line-height: 1.7;
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
+}
+
+/* FUNDO TECNOLÓGICO ANIMADO */
+
+
+/* FUNDO TECNOLÓGICO ANIMADO */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.85;
+
+    background-image:
+        radial-gradient(circle, #48e5df 2px, transparent 3px),
+        radial-gradient(circle, #e5b94b 2.5px, transparent 4px),
+        radial-gradient(circle, #a855f7 2px, transparent 3px),
+        radial-gradient(circle, #22c55e 2px, transparent 3px),
+        radial-gradient(circle, #ec4899 2px, transparent 3px),
+        radial-gradient(circle, #3b82f6 2px, transparent 3px),
+
+        linear-gradient(55deg,
+            transparent 49.7%,
+            rgba(48, 155, 190, 0.30) 50%,
+            transparent 50.3%),
+
+        linear-gradient(125deg,
+            transparent 49.7%,
+            rgba(48, 155, 190, 0.25) 50%,
+            transparent 50.3%);
+
+    background-size:
+        190px 180px,
+        310px 270px,
+        260px 230px,
+        340px 300px,
+        230px 250px,
+        280px 220px,
+        190px 180px,
+        190px 180px;
+
+    background-position:
+        0 0,
+        70px 100px,
+        130px 40px,
+        200px 170px,
+        50px 220px,
+        180px 80px,
+        0 0,
+        0 0;
+
+    animation: movimentarRede 22s linear infinite;
+}
+/* EFEITO DE LUZ NO FUNDO */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: -30%;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(0, 110, 145, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 75% 65%,
+            rgba(0, 90, 120, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 85%,
+            rgba(0, 65, 100, 0.12),
+            transparent 30%
+        );
+
+    animation: movimentarBrilho 12s ease-in-out infinite alternate;
+}
+
+/* MOVIMENTAÇÃO DOS PONTOS E LINHAS */
+
+@keyframes movimentarRede {
+    from {
+        background-position:
+            0 0,
+            70px 100px,
+            130px 40px,
+            200px 170px,
+            50px 220px,
+            180px 80px,
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            190px 180px,
+            -240px 370px,
+            390px -190px,
+            -140px 420px,
+            280px -30px,
+            -100px 300px,
+            190px 180px,
+            -190px 180px;
+    }
+}
+/* MOVIMENTAÇÃO DOS BRILHOS */
+
+@keyframes movimentarBrilho {
+    from {
+        transform: translate(-3%, -2%) scale(1);
+    }
+
+    to {
+        transform: translate(3%, 3%) scale(1.12);
+    }
+}
+
+/* CABEÇALHO */
+
+/* CABEÇALHO */
+
+/* CABEÇALHO */
+
+header {
+    background-color: transparent;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: none;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #b8c7d8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #48e5df;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+section {
+    background-color: transparent;
+    border: none;
+    padding: 35px 10px;
+    margin-bottom: 25px;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+section h2 {
+    color: #48cbd2;
+    margin-bottom: 18px;
+    font-size: 25px;
+    text-align: left;
+}
+
+section p {
+    text-align: left;
+}
+
+/* APRESENTAÇÃO INICIAL */
+
+.inicio {
+    text-align: left;
+    padding: 65px 10px;
+    background-color: transparent;
+}
+
+.inicio .destaque {
+    color: #48e5df;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.inicio h2 {
+    color: #ffffff;
+    font-size: 38px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.inicio p {
+    color: #b8c7d8;
+    margin-bottom: 22px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #105d69;
+    color: white;
+    padding: 11px 23px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #168b96;
+    transform: translateY(-3px);
+}
+
+/* HABILIDADES */
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.habilidades span {
+    background-color: rgba(9, 24, 38, 0.9);
+    color: #58d4dc;
+    border: 1px solid #1b4352;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.habilidades span:hover {
+    background-color: #102d3b;
+    border-color: #48cbd2;
+}
+
+/* PROJETOS */
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.projeto {
+    background-color: rgba(8, 15, 25, 0.90);
+    padding: 22px;
+    border-radius: 6px;
+    border: 1px solid #142b3a;
+    border-left: 3px solid #287d88;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.projeto:hover {
+    transform: translateY(-4px);
+    background-color: rgba(12, 28, 40, 0.96);
+    border-color: #287d88;
+}
+
+.projeto h3 {
+    color: #e2e8f0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.projeto p {
+    color: #aebdce;
+    margin-bottom: 15px;
+}
+
+.projeto a,
+#contato a {
+    color: #50cbd3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto a:hover,
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* CONTATO */
+
+#contato p {
+    margin-bottom: 8px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.94);
+    color: #75869a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    border-top: 1px solid #14212c;
+}
+
+/* AJUSTE PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 0 18px;
+    }
+
+    .inicio {
+        padding: 45px 10px;
+    }
+
+    .inicio h2 {
+        font-size: 28px;
+    }
+
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 25px 10px;
+    }
+}
+
+/* ACESSIBILIDADE: REDUZIR ANIMAÇÕES */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+
+/* ÍCONES DAS HABILIDADES */
+
+.habilidades span {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 15px;
+}
+
+.habilidades i {
+    font-size: 24px;
+    color: #50cbd3;
+}
+
+/* ÍCONE DO GITHUB NO CONTATO */
+
+#contato i {
+    font-size: 20px;
+    color: #50cbd3;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#contato p {
+    margin-bottom: 10px;
+}
